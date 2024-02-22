@@ -22,3 +22,9 @@ Route::get('/articles/{id}',[ArticleController::class, 'articles']);
 
 //Resource Controller
 Route::resource('photos', PhotoController::class);
+
+//Membuat View
+// Route::get('/greeting', function () {
+//       	return view('blog.hello', ['name' => 'Bril']); }); 
+Route::get('/greeting', [WelcomeController::class, 
+'greeting']); 
